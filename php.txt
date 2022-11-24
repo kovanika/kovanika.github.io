@@ -1,0 +1,62 @@
+<?php
+//Базы данных
+$dsn ="sqlite:/var/www/database.sqlite";
+$pdo = new PDO($dsn);
+?>
+
+<h1>Задание 1</h1>
+<pre>
+<?php
+//Выберите из таблицы users запись с id=2 и выведите на экран все поля этой записи
+//Для вывода используйте функцию print_r
+$sql = "SELECT * FROM users WHERE ID=:id";//TODO
+$result = $pdo->prepare($sql);
+$id=2;
+$result->bindParam(':id', $id, PDO::PARAM_INT);
+$result->execute();
+
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+   print_r($row);
+}
+?>
+</pre>
+<h1>Задание 2</h1>
+<pre>
+<?php
+//Выберите из таблицы posts значение столбца title для первых 3 записей, 
+//отсортированных по date_create по убыванию
+//Для вывода используйте функцию print_r
+
+$sql = "SELECT TITLE FROM POSTS ORDER BY date_create desc limit 3";//TODO
+$result = $pdo->prepare($sql);
+
+$result->execute();
+
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+   print_r($row);
+}
+
+
+?>
+</pre>
+<h1>Задание 3</h1>
+<pre>
+<?php
+//В таблице posts установите поле text='Обновленный текст' для записи с id=11
+//затем выберите эту запись из бд и выведите на экран все поля этой записи
+//Для вывода используйте функцию print_r
+
+$sql = "UPDATE POSTS SET text='Обновленный текст' WHERE ID=:id";//TODO
+$result = $pdo->prepare($sql);
+$id=11;
+$result->bindParam(':id', $id, PDO::PARAM_INT);
+$result->execute();
+
+$sql = "SELECT * FROM POSTS WHERE ID=:id";//TODO
+$result = $pdo->prepare($sql);
+$result->bindParam(':id', $id, PDO::PARAM_INT);
+$result->execute();
+
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+   print_r($row);
+}

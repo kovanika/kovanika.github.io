@@ -125,6 +125,8 @@ h1,h2,h3,h4,h5,h6 {
     border-radius: 10px;
     cursor: pointer;
     z-index: 1000;
+    text-decoration: none;
+
 }
 .btn__exit:hover{
     background-color: #A6C81E;
@@ -229,6 +231,8 @@ h1,h2,h3,h4,h5,h6 {
     height: 44px;
     cursor: pointer;
     z-index: 1000;
+    text-decoration: none;
+
 }
 .btn__card:hover{
     background-color: #A6C81E;
