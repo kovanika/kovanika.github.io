@@ -106,6 +106,31 @@ h1,h2,h3,h4,h5,h6 {
     opacity: .3;
     margin: 74 autos;
 }
+.btn__exit{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #A6C81E;
+    background-color: #ffffff;
+    border-style: none;
+    border: 2px solid #A6C81E;
+    border-radius: 10px;
+    line-height: 60px;
+    width: 189px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.btn__exit:hover{
+    background-color: #A6C81E;
+    color: #ffffff;
+    transition: .4s;
+}
 .btn{
     display: flex;
     align-items: center;

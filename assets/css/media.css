@@ -55,7 +55,6 @@
         line-height: 60px;}
 }
 
-/* Portrait phones and smaller */
 @media (max-width: 699px) {
     .btn{
         display: none;
